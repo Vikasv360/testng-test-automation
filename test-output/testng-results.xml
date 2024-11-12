@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-11T19:46:53 IST" name="Default suite" finished-at="2024-11-11T19:47:12 IST" duration-ms="18253">
+    <groups>
+    </groups>
+    <test started-at="2024-11-11T19:46:53 IST" name="Default test" finished-at="2024-11-11T19:47:12 IST" duration-ms="18253">
+      <class name="testValidations.TestValidationsPOM">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testValidations.TestValidationsPOM@25ce9dc4]" started-at="2024-11-11T19:46:53 IST" name="setUp" finished-at="2024-11-11T19:47:00 IST" duration-ms="7139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="accountLogin()[pri:0, instance:testValidations.TestValidationsPOM@25ce9dc4]" started-at="2024-11-11T19:47:00 IST" name="accountLogin" finished-at="2024-11-11T19:47:02 IST" duration-ms="1234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accountLogin -->
+        <test-method signature="accountLogout()[pri:0, instance:testValidations.TestValidationsPOM@25ce9dc4]" started-at="2024-11-11T19:47:02 IST" name="accountLogout" finished-at="2024-11-11T19:47:05 IST" depends-on-methods="testValidations.TestValidationsPOM.accountLogin" duration-ms="3541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accountLogout -->
+        <test-method signature="dashboard()[pri:0, instance:testValidations.TestValidationsPOM@25ce9dc4]" started-at="2024-11-11T19:47:05 IST" name="dashboard" finished-at="2024-11-11T19:47:07 IST" depends-on-methods="testValidations.TestValidationsPOM.accountLogin" duration-ms="2249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dashboard -->
+        <test-method signature="wishListFunct()[pri:0, instance:testValidations.TestValidationsPOM@25ce9dc4]" started-at="2024-11-11T19:47:07 IST" name="wishListFunct" finished-at="2024-11-11T19:47:10 IST" depends-on-methods="testValidations.TestValidationsPOM.accountLogin" duration-ms="2076" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wishListFunct -->
+        <test-method is-config="true" signature="tearUp()[pri:0, instance:testValidations.TestValidationsPOM@25ce9dc4]" started-at="2024-11-11T19:47:10 IST" name="tearUp" finished-at="2024-11-11T19:47:12 IST" duration-ms="1972" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearUp -->
+      </class> <!-- testValidations.TestValidationsPOM -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
