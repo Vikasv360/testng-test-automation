@@ -6,7 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import junit.framework.Assert;
+import org.testng.Assert;
+
 import reusableComponents.reusableComponent;
 
 public class DashboardPage extends reusableComponent{
@@ -37,6 +38,10 @@ public class DashboardPage extends reusableComponent{
 	
 	@FindBy(css="a[id='wishlist-total']")
 	WebElement wishListMenu;
+	
+	@FindBy(xpath = "//a[text()='Logout']")
+	WebElement logoutBtn;
+
 	
 	By wishListSuccessMsg=By.cssSelector(".alert.alert-success.alert-dismissible");
 	
@@ -75,7 +80,8 @@ public class DashboardPage extends reusableComponent{
 	//Add Product To wishList
 	public void AddProductTowishList(){
 
-		for (int i = 0; i < itemList.size(); i++) {
+		for (int i = 0; i < itemList.size(); i++)
+		{
 			WebElement item = itemList.get(i);
 			String itemText = item.getText();
 			if (itemText.contains("iPhone")) {
@@ -89,12 +95,15 @@ public class DashboardPage extends reusableComponent{
 	
 	//Go To WishList Page
 	public void goToWishListPage() {
-		
 		String actWishListTxt = wishListMenu.getText();
 		String exptWishListTxt = "Wish List (1)";
 		Assert.assertEquals(actWishListTxt, exptWishListTxt);
 		wishListMenu.click();
 	}
 	
-
+	
+	public void acctLogout() {
+		myAcctMenu.click();
+		logoutBtn.click();
+	}
 }

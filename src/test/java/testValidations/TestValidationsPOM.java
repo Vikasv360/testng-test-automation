@@ -1,43 +1,29 @@
 package testValidations;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pageObjects.*;
+import testComponents.BaseTest;
 
-public class TestValidationsPOM {
+public class TestValidationsPOM extends BaseTest{
 
-	WebDriver driver;
-	DashboardPage dashboardPage;
-
-	@BeforeClass
-	public void setUp() {
-
-		driver = new EdgeDriver();
-		driver.get("https://tutorialsninja.com/demo/index.php?route=common/home");
-		driver.manage().window().maximize();
-	}
-
-	@AfterClass
-	public void tearUp() {
-
-		driver.quit();
-	}
-
-	@Test
-	public void accountLogin() {
+	@Test(dataProvider = "getValidCred")
+	public void accountLogin(String email,String password) {
 
 		DashboardPage dashboardPage = new DashboardPage(driver);
 		dashboardPage.goToLoginPage();
 	
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.enterCredentials("vikasv360test@gmail.com", "Test@1234");
+		loginPage.enterCredentials(email,password);
 		loginPage.clickOnLogin();
 		
 
+	}
+	
+	@DataProvider
+	public Object[][] getValidCred() {
+		
+		return new Object[][] {{"vikasv360test@gmail.com", "Test@1234"}} ;
 	}
 
 	@Test(dependsOnMethods = "accountLogin")
@@ -71,8 +57,9 @@ public class TestValidationsPOM {
 	public void accountLogout() throws InterruptedException {
 
 		Thread.sleep(3000);
-		driver.findElement(By.cssSelector("a[title='My Account']")).click();
-		driver.findElement(By.xpath("//a[text()='Logout']")).click();
+		DashboardPage dashboardPage = new DashboardPage(driver);
+		dashboardPage.acctLogout();
+
 	}
 
 }

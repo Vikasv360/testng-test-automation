@@ -9,7 +9,6 @@
           <include name="setUp"/>
           <include name="wishListFunct"/>
           <include name="tearUp"/>
-          <include name="dashboard"/>
         </methods>
       </class> <!-- testValidations.TestValidationsPOM -->
     </classes>

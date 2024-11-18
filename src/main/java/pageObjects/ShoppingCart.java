@@ -36,11 +36,11 @@ public class ShoppingCart extends reusableComponent{
 
 	public void removeOutOfStockProduct() {
 
-		String alertText = driver.findElement(By.cssSelector("div[class*='alert-danger']")).getText();
+		String alertText = alertMessage.getText();
 		String exptAlertText = "Products marked with *** are not available in the desired quantity or not in stock!";
 
 		if (alertText.contains(exptAlertText)) {
-			driver.findElement(By.cssSelector("button[class='btn btn-danger']")).click();
+			removeButton.click();
 		}
 		
 		waitForElementToDisappear(removeButtonBy);
@@ -49,13 +49,13 @@ public class ShoppingCart extends reusableComponent{
 
 	public void clickOnContinueBtn() {
 
-		String shpCartTxt = driver.findElement(By.cssSelector("div[id='content'] p")).getText();
+		String shpCartTxt = emptyCartMsg.getText();
 		String exptShpCartTxt = "Your shopping cart is empty!";
 
 		System.out.println(shpCartTxt);
 
 		if (shpCartTxt.contains(exptShpCartTxt)) {
-			driver.findElement(By.xpath("//a[text()='Continue']")).click();
+			continueBtn.click();
 		}
 
 	}

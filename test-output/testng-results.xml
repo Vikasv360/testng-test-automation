@@ -2,35 +2,47 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-11T19:46:53 IST" name="Default suite" finished-at="2024-11-11T19:47:12 IST" duration-ms="18253">
+  <suite started-at="2024-11-18T22:06:07 IST" name="Default suite" finished-at="2024-11-18T22:06:14 IST" duration-ms="7592">
     <groups>
     </groups>
-    <test started-at="2024-11-11T19:46:53 IST" name="Default test" finished-at="2024-11-11T19:47:12 IST" duration-ms="18253">
+    <test started-at="2024-11-18T22:06:07 IST" name="Default test" finished-at="2024-11-18T22:06:14 IST" duration-ms="7592">
       <class name="testValidations.TestValidationsPOM">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testValidations.TestValidationsPOM@25ce9dc4]" started-at="2024-11-11T19:46:53 IST" name="setUp" finished-at="2024-11-11T19:47:00 IST" duration-ms="7139" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testValidations.TestValidationsPOM@350aac89]" started-at="2024-11-18T22:06:01 IST" name="setup" finished-at="2024-11-18T22:06:07 IST" duration-ms="5566" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="accountLogin()[pri:0, instance:testValidations.TestValidationsPOM@25ce9dc4]" started-at="2024-11-11T19:47:00 IST" name="accountLogin" finished-at="2024-11-11T19:47:02 IST" duration-ms="1234" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="accountLogin(java.lang.String,java.lang.String)[pri:0, instance:testValidations.TestValidationsPOM@350aac89]" started-at="2024-11-18T22:06:07 IST" name="accountLogin" data-provider="getValidCred" finished-at="2024-11-18T22:06:08 IST" duration-ms="1233" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[vikasv360test@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test@1234]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountLogin -->
-        <test-method signature="accountLogout()[pri:0, instance:testValidations.TestValidationsPOM@25ce9dc4]" started-at="2024-11-11T19:47:02 IST" name="accountLogout" finished-at="2024-11-11T19:47:05 IST" depends-on-methods="testValidations.TestValidationsPOM.accountLogin" duration-ms="3541" status="PASS">
+        <test-method signature="accountLogout()[pri:0, instance:testValidations.TestValidationsPOM@350aac89]" started-at="2024-11-18T22:06:08 IST" name="accountLogout" finished-at="2024-11-18T22:06:11 IST" depends-on-methods="testValidations.TestValidationsPOM.accountLogin" duration-ms="3531" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountLogout -->
-        <test-method signature="dashboard()[pri:0, instance:testValidations.TestValidationsPOM@25ce9dc4]" started-at="2024-11-11T19:47:05 IST" name="dashboard" finished-at="2024-11-11T19:47:07 IST" depends-on-methods="testValidations.TestValidationsPOM.accountLogin" duration-ms="2249" status="PASS">
+        <test-method signature="dashboard()[pri:0, instance:testValidations.TestValidationsPOM@350aac89]" started-at="2024-11-18T22:06:11 IST" name="dashboard" finished-at="2024-11-18T22:06:13 IST" depends-on-methods="testValidations.TestValidationsPOM.accountLogin" duration-ms="2027" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dashboard -->
-        <test-method signature="wishListFunct()[pri:0, instance:testValidations.TestValidationsPOM@25ce9dc4]" started-at="2024-11-11T19:47:07 IST" name="wishListFunct" finished-at="2024-11-11T19:47:10 IST" depends-on-methods="testValidations.TestValidationsPOM.accountLogin" duration-ms="2076" status="PASS">
+        <test-method signature="wishListFunct()[pri:0, instance:testValidations.TestValidationsPOM@350aac89]" started-at="2024-11-18T22:06:13 IST" name="wishListFunct" finished-at="2024-11-18T22:06:14 IST" depends-on-methods="testValidations.TestValidationsPOM.accountLogin" duration-ms="741" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- wishListFunct -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:testValidations.TestValidationsPOM@25ce9dc4]" started-at="2024-11-11T19:47:10 IST" name="tearUp" finished-at="2024-11-11T19:47:12 IST" duration-ms="1972" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testValidations.TestValidationsPOM@350aac89]" started-at="2024-11-18T22:06:14 IST" name="teardown" finished-at="2024-11-18T22:06:16 IST" duration-ms="2065" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearUp -->
+        </test-method> <!-- teardown -->
       </class> <!-- testValidations.TestValidationsPOM -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
