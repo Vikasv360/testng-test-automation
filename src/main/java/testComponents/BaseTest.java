@@ -9,6 +9,10 @@ import org.testng.annotations.BeforeSuite;
 public class BaseTest {
 
 	public WebDriver driver;
+	
+	 public WebDriver getDriver() {
+	        return driver;
+	    }
 
     @BeforeSuite
     public void setup() {
